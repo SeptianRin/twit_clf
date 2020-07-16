@@ -4,6 +4,7 @@ from joblib import load
 from get_tweets import get_related_tweets
 import pandas as pd
 import simplejson as json
+import os
 
 
 pipeline = load("text_classification.joblib")
