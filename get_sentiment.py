@@ -34,24 +34,7 @@ def hello():
 def success(name):
     return "<xmp>" + str(requestResults(name)) + " </xmp> "
 
-run(host='localhost', port=5000, debug=True)
-"""
-@app.route('/',methods=["GET"])
-def home():
-    return "Hello World!"
-
-
-@app.route('/', methods=['POST', 'GET'])
-def get_data():
-    if bottle.request.method == 'POST':
-        user = bottle.request.body.read()
-        return bottle.redirect('/success/{{name}}', name=user)
-
-
-@app.route('/success/<name>')
-def success(name):
-    return "<xmp>" + str(requestResults(name)) + " </xmp> "
-
-
-run(app,reloader=True,port =3000)
-"""
+if os.environ.get('APP_LOCATION') == 'heroku':
+    run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+else:
+    run(host='localhost', port=5000, debug=True)
