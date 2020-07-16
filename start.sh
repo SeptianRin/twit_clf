@@ -1,1 +1,1 @@
-python get_sentiment.py
+python3 get_sentiment.py

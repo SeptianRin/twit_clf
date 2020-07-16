@@ -38,4 +38,4 @@ def success(name):
 if os.environ.get('APP_LOCATION') == 'heroku':
     run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 else:
-    run(host='localhost', port=5000, debug=True)
+    run(host='localhost', port=3000, debug=True)
