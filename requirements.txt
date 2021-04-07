@@ -1,4 +1,4 @@
-bottle==0.12.18
+bottle==0.12.19
 joblib==0.16.0
 pandas==1.0.5
 simplejson==3.17.0
